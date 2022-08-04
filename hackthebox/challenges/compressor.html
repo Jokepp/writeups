@@ -1,48 +1,4 @@
-<style type="text/css">
-  html {font-family: sans-serif;}
-
-  pre, img, table, p, blockquote {
-    width: 50vw;
-    margin-left: 2em;
-  }
-
-  blockquote {
-    font-style: italic;
-    background: gainsboro;
-    padding: .5em;
-    /* font-family: monospace; */
-  }
-
-  pre {
-    background: darkslategray;
-    color: white;
-    padding: .5em;
-    margin-left: 2.5em;
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  }
-
-  img {
-    border: solid black 1px;
-    padding: .5vw;
-  }
-
-  ol {
-  	counter-reset: list;
-  }
-
-  ol > li {
-  	list-style: none;
-  }
-
-  ol > li:before {
-  	content: "[" counter(list) "] ";
-  	counter-increment: list;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="includes/style.css">
 
 <h1>Writeup "Compressor"</h1>
 
@@ -66,13 +22,13 @@
 
 <p>We receive an IP and port to a server. When we access the server using a web browser, we see the error output of a program:</p>
 
-<img src="compressor-01.png" />
+<img src="includes/compressor-01.png" />
 
 <p>The problem seems to be that the program asks for a user input and receives an HTTP GET request. A web search reveals that the used PHP <code>input()</code> function has vulnerabilities [1], but they seem not to be exploitable in this case.</p>
 
 <p>Next, we try to telnet to the given IP and port and receive a working interactive version of the program. The program allows us to select a body part and then displays a menu with different manipulation options:</p>
 
-<img src="compressor-02.png" />
+<img src="includes/compressor-02.png" />
 
 <p>Given in brackets are the shell commands that are executed for each option. Option 4 seems usable for searching though the file system, but it actually only returns to the first screen. Option 3 however gives us access to the <code>zip</code> command and allows us to specify options. This looks promising and we start studying the man page for <code>zip</code>. The first helpful option we find is <code>-sf</code>:</p>
 
@@ -81,7 +37,7 @@
 
 <p>Using this option and <code>-r</code> for traveling the directory structure, we can look through the file system:</p>
 
-<img src="compressor-03.png" />
+<img src="includes/compressor-03.png" />
 
 <p>We discovered the location of <code>flag.txt</code>! Now how to read its content?</p>
 
@@ -96,7 +52,7 @@ In cmd, {} is replaced by the name of the temporary archive, otherwise the name 
 
 <p>Using this knowledge, we can zip the flag.txt file and then call the <code>cat</code> command to print out the zip file after creation. If we choose this way, we also have to include the <code>-0</code> option so that the zip file is not compressed:</p>
 
-<img src="compressor-04.png" />
+<img src="includes/compressor-04.png" />
 
 <p>This prints out the flag!</p>
 
@@ -109,5 +65,4 @@ HTB{z1pp1ti_z0pp1t1_GTFO_0f_my_pr0p3rty}
 <ol>
 	<li><a href="https://www.geeksforgeeks.org/vulnerability-input-function-python-2-x/">https://www.geeksforgeeks.org/vulnerability-input-function-python-2-x/</a></li>
 	<li><a href="https://linux.die.net/man/1/zip">https://linux.die.net/man/1/zip</a></li>
-	<li><a href=""></a></li>
 </ol>

@@ -1,40 +1,4 @@
-<style type="text/css">
-  html {font-family: sans-serif;}
-
-  pre, img, table, p {
-    width: 50vw;
-    margin-left: 2em;
-  }
-
-  pre {
-    background: darkslategray;
-    color: white;
-    padding: 1em;
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  }
-
-  img {
-    border: solid black 1px;
-    padding: .5vw;
-  }
-
-  ol {
-  	counter-reset: list;
-  }
-
-  ol > li {
-  	list-style: none;
-  }
-
-  ol > li:before {
-  	content: "[" counter(list) "] ";
-  	counter-increment: list;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="includes/style.css">
 
 <h1>Writeup "Letter Dispair"</h1>
 
@@ -54,11 +18,11 @@
 
 <p>We receive an IP and port to a server. When we access the server using a web browser, we see a directory listing with three files:</p>
 
-<img src="letter-dispair-01.png" />
+<img src="includes/letter-dispair-01.png" />
 
 <p><code>mailer.php</code> displays a form for sending e-mails:</p>
 
-<img src="letter-dispair-02.png" />
+<img src="includes/letter-dispair-02.png" />
 
 <p><code>mailer.zip</code> contains <code>mailer.php</code> which allows us to analyse the source code.</p>
 
@@ -99,7 +63,7 @@ relations@moi.gov.htb -X/var/www/html/rce.php
 
 <p>After hitting the "Start Delivery" button, we reload the directory listing in order to verify that the file was created correctly. If no file is visible, we have to try different paths. In this case we are lucky on the first try:</p>
 
-<img src="letter-dispair-03.png" />
+<img src="includes/letter-dispair-03.png" />
 
 <p>We can now open our PHP shell and start looking for the flag. Using the following commands, we are successful:</p>
 
@@ -110,7 +74,7 @@ find / -name *flag*
 cat /flag.txt
 </pre>
 
-<img src="letter-dispair-04.png" />
+<img src="includes/letter-dispair-04.png" />
 
 <pre>
 HTB{4_l3tt3r_0f_h0p3_c0nqu3r1ng_d1sp4ir!}
