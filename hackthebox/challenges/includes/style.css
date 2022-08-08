@@ -2,7 +2,7 @@ html {
 font-family: sans-serif;
 }
 
-pre, img, table, p, blockquote {
+pre, img, table, p, blockquote, ul {
 width: 50vw;
 margin-left: 2em;
 }
