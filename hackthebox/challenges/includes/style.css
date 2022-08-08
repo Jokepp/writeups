@@ -2,7 +2,7 @@ html {
 font-family: sans-serif;
 }
 
-pre, img, table, p, blockquote, ul {
+pre, img, table, p, blockquote, ul, ol {
 width: 50vw;
 margin-left: 2em;
 }
@@ -31,15 +31,16 @@ border: solid black 1px;
 padding: .5vw;
 }
 
-ol {
+#sources {
 counter-reset: list;
+margin-left: 0;
 }
 
-ol > li {
+#sources > li {
 list-style: none;
 }
 
-ol > li:before {
+#sources > li:before {
 content: "[" counter(list) "] ";
 counter-increment: list;
 }
