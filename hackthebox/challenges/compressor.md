@@ -4,8 +4,8 @@
 
 <table>
 	<tr><td><b>site</b></td><td>Hack the box</td></tr>
-	<tr><td><b>url</b></td><td><a href="https://app.hackthebox.com/challenges/compressor">https://app.hackthebox.com/challenges/compressor</a></td></tr>
-	<tr><td><b>discussion</b></td><td><a href="https://forum.hackthebox.com/t/official-compressor-discussion">https://forum.hackthebox.com/t/official-compressor-discussion</a></td></tr>
+	<tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/compressor</td></tr>
+	<tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-compressor-discussion</td></tr>
 	<tr><td><b>type</b></td><td>challenge/misc</td></tr>
 	<tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>very easy</td></tr>
 	<tr><td><b>startdate</b></td><td>2022-08-03</td></tr>

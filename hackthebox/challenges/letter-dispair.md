@@ -4,8 +4,8 @@
 
 <table>
 	<tr><td><b>site</b></td><td>Hack the box</td></tr>
-	<tr><td><b>url</b></td><td><a href="https://app.hackthebox.com/challenges/letter-dispair">https://app.hackthebox.com/challenges/letter-dispair</a></td></tr>
-	<tr><td><b>discussion</b></td><td><a href="https://forum.hackthebox.com/t/official-letter-dispair-discussion">https://forum.hackthebox.com/t/official-letter-dispair-discussion</a></td></tr>
+	<tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/letter-dispair</td></tr>
+	<tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-letter-dispair-discussion</td></tr>
 	<tr><td><b>type</b></td><td>challenge/web</td></tr>
 	<tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>easy</td></tr>
 	<tr><td><b>startdate</b></td><td>2022-07-31</td></tr>

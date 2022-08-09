@@ -4,8 +4,8 @@
 
 <table>
 	<tr><td><b>site</b></td><td>Hack the Box</td></tr>
-	<tr><td><b>url</b></td><td><a href="https://app.hackthebox.com/challenges/the-needle">https://app.hackthebox.com/challenges/the-needle</a></td></tr>
-	<tr><td><b>discussion</b></td><td><a href="https://forum.hackthebox.com/t/official-the-needle-discussion">https://forum.hackthebox.com/t/official-the-needle-discussion</a></td></tr>
+	<tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/the-needle</td></tr>
+	<tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-the-needle-discussion</td></tr>
 	<tr><td><b>type</b></td><td>challenge/hardware</td></tr>
 	<tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>very easy</td></tr>
 	<tr><td><b>startdate</b></td><td>2022-07-29</td></tr>
