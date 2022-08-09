@@ -1,8 +1,6 @@
-<link rel="stylesheet" type="text/css" href="includes/style.css">
+# Writeup "___"
 
-<h1>Writeup "___"</h1>
-
-<h2>Quick Info</h2>
+## Quick Info
 
 <table>
 	<tr><td><b>site</b></td><td>Hack the Box</td></tr>
@@ -14,42 +12,22 @@
 	<tr><td><b>enddate</b></td><td>___</td></tr>
 </table>
 
-<h2>Description</h2>
+## Description
 
-<blockquote>__</blockquote>
+> __
 
-<h2>Solution</h2>
+## Solution
 
-<p></p>
+<p align="center">
+   <img src="includes/___-01.png" />
+</p>
 
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<img src="includes/___-01.png" />
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<pre>
+```
 HTB{__}
-</pre>
+```
 
-<h2>Sources</h2>
+## Sources
 
-<ol id="sources">
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-</ol>
+1. 
+2. 
+3. 
