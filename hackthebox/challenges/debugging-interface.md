@@ -18,6 +18,8 @@
 
 ## Solution
 
+[^1][^2][^3]
+
 <p align="center">
    <img src="includes/debugging-interface-01.png" />
 </p>
@@ -26,8 +28,8 @@
 HTB{d38u991n9_1n732f4c35_c4n_83_f0und_1n_41m057_3v32y_3m83dd3d_d3v1c3!!52}
 ```
 
-## Sources
+### Sources
 
-1. https://www.saleae.com/downloads/
-2. https://support.saleae.com/protocol-analyzers/analyzer-user-guides/using-async-serial
-3. https://support.saleae.com/tutorials/learning-portal/learning-resources/learn-asynchronous-serial#whats-a-framing-error
+[^1]: https://www.saleae.com/downloads/
+[^2]: https://support.saleae.com/protocol-analyzers/analyzer-user-guides/using-async-serial
+[^3]: https://support.saleae.com/tutorials/learning-portal/learning-resources/learn-asynchronous-serial#whats-a-framing-error

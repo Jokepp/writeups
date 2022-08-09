@@ -30,11 +30,11 @@ We receive an IP and port to a server. When we access the server using a web bro
    <img src="includes/letter-dispair-02.png" />
 </p>
 
-`mailer.zip` contains `mailer.php` which allows us to analyse the source code.
+`mailer.zip` contains a copy of `mailer.php`, which allows us to analyse the source code.
 
-A quick Google search tells us that PHP's mail() function allows remote code execution if the fifth parameter can be influenced by the user. Checking the source code reveals that the code is vulnerable. Whatever we put in the "From Email" field will be used as a parameter.
+A quick Google search tells us that PHP's `mail()`[^1] function allows remote code execution if the fifth parameter can be influenced by the user[^2]. Checking the source code reveals that the code is vulnerable. Whatever we put in the "From Email" field will be used as a parameter.
 
-Following the article at [1], we enter the following string in the "From Email" field to create a publicly-accessible PHP file whose contents we can manipulate:
+Following an article describing how to exploit the vulnerability[^3], we enter the following string in the "From Email" field to create a publicly-accessible PHP file whose contents we can manipulate:
 
 ```
 relations@moi.gov.htb -X/var/www/html/rce.php
@@ -90,8 +90,8 @@ cat /flag.txt
 HTB{4_l3tt3r_0f_h0p3_c0nqu3r1ng_d1sp4ir!}
 ```
 
-## Sources
+### Sources
 
-1. https://www.saotn.org/exploit-phps-mail-get-remote-code-execution
-2. https://www.php.net/manual/de/function.mail.php
-3. https://blog.sonarsource.com/why-mail-is-dangerous-in-php/
+[^1]: https://www.php.net/manual/de/function.mail.php
+[^2]: https://blog.sonarsource.com/why-mail-is-dangerous-in-php/
+[^3]: https://www.saotn.org/exploit-phps-mail-get-remote-code-execution

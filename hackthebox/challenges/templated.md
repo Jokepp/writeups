@@ -18,17 +18,17 @@
 
 ## Solution
 
-We receive an IP and port to a server. When we access the server using a web browser, we see an 'under construction' site. The technology used is displayed (Flask/Jinja2), but no other infos can be found on this site:
+We receive an IP and port to a server. When we access the server using a web browser, we see a site 'under construction'. The technology used is displayed (the _Python_ framework _Flask_ and the templating engine _Jinja2_), but no other infos can be found on this site:
 
 <p align="center">
    <img src="includes/templated-01.png" />
 </p>
 
-A web search for _"flask jinja2 vulnerability"_ points us in the right direction: under the right conditions, a Server Side Template Injection (SSTI) is possible. Often, this is done by changing the value passed to a HTTP GET parameter. In this case we cannot identify such parameters.
+A web search for _"flask jinja2 vulnerability"_ points us in the right direction: under the right conditions, a _server side template injection_ (SSTI) is possible[^1]. Often, this is done by changing the value GET parameter in the URL. In this case we cannot identify such parameters.
 
-We decide to scan for additional files and folders using _gobuster_. However, we discover quickly that the server returns a status code `200` even for all pages, even for pages that do not exist. This makes it impossible to use _gobuster_ in this situation.
+We decide to scan for additional files and folders using _gobuster_. However, we discover quickly that the server returns a status code `200` for all pages, even for pages that do not exist. This makes it impossible to use gobuster in this situation.
 
-While investigating this behaviour, we notice that the error page contains the name of the page we tried to open. The usage of the non-standard `&lt;str&gt;` tag and the newlines around the name make us think that this string was included by the Flask/Jinja2 template:
+While investigating this behaviour, we notice that the error page contains the name of the page we tried to open. The usage of the non-standard `<str>` tag and the newlines around the name make us think that this string was included by the Flask/Jinja2 template:
 
 <p align="center">
    <img src="includes/templated-02.png" />
@@ -36,7 +36,7 @@ While investigating this behaviour, we notice that the error page contains the n
 
 We decide to test whether an SSTI is possible by inserting the following Jinja2 placeholder:
 
-```
+``` python
 {{ 42+5 }}
 ```
 
@@ -48,13 +48,13 @@ The response is promising:
 
 We decide to follow the article found earlier and start navigating the chain of Python objects starting with an empty string:
 
-```
+``` python
 {{ ''.__class__ }}
 ```
 
-This is working and we continue following the chain of objects. The only difficult part is finding out the correct index of the class `_io._IOBase` (it is 101). Finally, we find the `_io.FileIO` class using the string:
+This is working and we continue following the chain of objects. The only difficult part is finding out the correct index of the class `_io._IOBase` which is `101` in this case. Finally, we find the `_io.FileIO` class using the string:
 
-```
+``` python
 {{ ''.__class__.__base__.__subclasses__()[101].__subclasses__()[0].__subclasses__()[0] }}
 ```
 
@@ -62,9 +62,9 @@ This is working and we continue following the chain of objects. The only difficu
    <img src="includes/templated-04.png" />
 </p>
 
-We can now use this string like the Python class `io.FileIO` described under [2]. Calling this class with a file path returns a `io.BufferedReader` object. Calling its `read()` method returns the file's contents:
+We can now use this string like the Python class `io.FileIO` described in the official Python documentation[^2]. Calling this class with a file path returns a `io.BufferedReader` object. Calling its `read()` method returns the file's contents:
 
-```
+``` python
 {{ ''.__class__.__base__.__subclasses__()[101].__subclasses__()[0].__subclasses__()[0]('flag.txt').read() }}
 ```
 
@@ -78,7 +78,7 @@ This gives us the flag:
 HTB{t3mpl4t3s_4r3_m0r3_p0w3rfu1_th4n_u_th1nk!}
 ```
 
-## Sources
+### Sources
 
-1. https://kleiber.me/blog/2021/10/31/python-flask-jinja2-ssti-example/
-2. https://docs.python.org/3/library/io.html
+[^1]: https://kleiber.me/blog/2021/10/31/python-flask-jinja2-ssti-example/
+[^2]: https://docs.python.org/3/library/io.html

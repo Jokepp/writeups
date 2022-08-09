@@ -26,8 +26,8 @@
 HTB{l00k_47_y0u_r3v3rs1ng_3qu4710n5_c0ngr475}
 ```
 
-## Sources
+### Sources
 
-1. 
-2. 
-3. 
+[^1]: 
+[^2]: 
+[^3]: 
