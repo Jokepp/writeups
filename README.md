@@ -13,4 +13,5 @@
     - Web
       - [Letter Dispair](hackthebox/challenges/letter-dispair.md) (easy)
       - [Neonify](hackthebox/challenges/neonify.md) (easy)
+      - [petpet rcbee](hackthebox/challenges/petpet-rcbee.md) (easy)
       - [Templated](hackthebox/challenges/templated.md) (easy)
