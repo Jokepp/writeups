@@ -3,13 +3,13 @@
 ## Quick Info
 
 <table>
-	<tr><td><b>site</b></td><td>Hack the Box</td></tr>
-	<tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/babyencryption</td></tr>
-	<tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-babyencryption-discussion</td></tr>
-	<tr><td><b>type</b></td><td>challenge/crypto</td></tr>
-	<tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>very easy</td></tr>
-	<tr><td><b>startdate</b></td><td>2022-05-31</td></tr>
-	<tr><td><b>enddate</b></td><td>2022-05-31</td></tr>
+   <tr><td><b>site</b></td><td>Hack the Box</td></tr>
+   <tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/babyencryption</td></tr>
+   <tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-babyencryption-discussion</td></tr>
+   <tr><td><b>type</b></td><td>challenge/crypto</td></tr>
+   <tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>very easy</td></tr>
+   <tr><td><b>startdate</b></td><td>2022-05-31</td></tr>
+   <tr><td><b>enddate</b></td><td>2022-05-31</td></tr>
 </table>
 
 ## Description

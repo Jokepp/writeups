@@ -3,13 +3,13 @@
 ## Quick Info
 
 <table>
-	<tr><td><b>site</b></td><td>Hack the Box</td></tr>
-	<tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/neonify</td></tr>
-	<tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-neonify-discussion</td></tr>
-	<tr><td><b>type</b></td><td>challenge/web</td></tr>
-	<tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>easy</td></tr>
-	<tr><td><b>startdate</b></td><td>2022-08-07</td></tr>
-	<tr><td><b>enddate</b></td><td>2022-08-08</td></tr>
+   <tr><td><b>site</b></td><td>Hack the Box</td></tr>
+   <tr><td><b>url</b></td><td>https://app.hackthebox.com/challenges/neonify</td></tr>
+   <tr><td><b>discussion</b></td><td>https://forum.hackthebox.com/t/official-neonify-discussion</td></tr>
+   <tr><td><b>type</b></td><td>challenge/web</td></tr>
+   <tr><td><b>difficulty&nbsp;&nbsp;&nbsp;</b></td><td>easy</td></tr>
+   <tr><td><b>startdate</b></td><td>2022-08-07</td></tr>
+   <tr><td><b>enddate</b></td><td>2022-08-08</td></tr>
 </table>
 
 ## Description
