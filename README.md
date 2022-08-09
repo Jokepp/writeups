@@ -5,6 +5,9 @@
   - Challenges
     - Hardware
       - [The Needle](hackthebox/challenges/the-needle.md) (very easy)
+      - [~~Debugging Interface~~](hackthebox/challenges/debugging-interface.md) (very easy)
+    - Crypto
+      - [~~BabyEncryption~~](hackthebox/challenges/babyencryption.md) (very easy)
     - Misc
       - [Compressor](hackthebox/challenges/compressor.md) (very easy)
     - Web
