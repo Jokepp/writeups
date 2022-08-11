@@ -53,7 +53,7 @@ $cookie = base64_decode($_COOKIE['PHPSESSID']);
 unserialize($cookie);
 ```
 
-First, the code checks if there is a cookie set. If there is none, a new `PageModel` object is created. Then, the cookie is read and unserialized[^2] without any checks or sanitation of what can effectively be considered a user input. This allows an attack _"PHP Object Injection"_[^3][^4]. Let's take a look at the definition of the `PageModel` class:
+First, the code checks if there is a cookie set. If there is none, a new `PageModel` object is created. Then, the cookie is read and unserialized[^2] without any checks or sanitation of what is effectively a user input. This allows a _"PHP Object Injection"_ attack[^3][^4]. Let's take a look at the definition of the `PageModel` class:
 
 ``` php
 class PageModel
@@ -94,7 +94,7 @@ print $c;
 Output: "Tzo5OiJQYWdlTW9kZWwiOjE6e3M6NDoiZmlsZSI7czoyNToiL3Zhci9sb2cvbmdpbngvYWNjZXNzLmxvZyI7fQ=="
 ```
 
-The cookie's value is replaced using the Firefox developer tools and the web site shows the contents of the log file:
+The cookie's value is replaced using the Firefox developer tools and the website shows the contents of the log file:
 
 <p align="center">
    <img src="includes/toxic-02.png" />
@@ -106,7 +106,7 @@ Now we need a way of injecting our PHP code into the log file. Since we can see 
 <?php echo shell_exec($_GET['cmd']); ?>
 ```
 
-This will execute any command that is passed to the page via the GET parameter `cmd`. We replace the `User-Agent` string using the Firefox developer tools again by right-clicking on the last GET request and choosing _"Edit and Resend"_:
+This will execute any command that is passed to the page via the GET parameter `cmd`. We replace the `User-Agent` string using the Firefox developer tools once more by right-clicking on the last GET request and choosing _"Edit and Resend"_:
 
 <p align="center">
    <img src="includes/toxic-03.png" />
