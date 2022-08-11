@@ -8,8 +8,8 @@
    <tr><td><b> discussion </b></td><td> https://forum.hackthebox.com/t/official-toxic-discussion </td></tr>
    <tr><td><b> type       </b></td><td> challenge/web                                           </td></tr>
    <tr><td><b> difficulty </b></td><td> easy                                                    </td></tr>
-   <tr><td><b> startdate  </b></td><td> __                                              </td></tr>
-   <tr><td><b> enddate    </b></td><td> __                                              </td></tr>
+   <tr><td><b> startdate  </b></td><td> 2022-08-10                                              </td></tr>
+   <tr><td><b> enddate    </b></td><td> 2022-08-11                                              </td></tr>
 </table>
 
 ## Description
