@@ -115,8 +115,7 @@ We can see that there is a _PHP_ file, so this should be the right answer.
 
 ---
 
-> Submit flag  
-> Hint: `***`
+> Submit flag
 
 After a lot of trial and error, we find a command to download all files from the bucket to the local file system:
 
