@@ -2,6 +2,7 @@
 
 - Hack The Box
   - Machines
+    - [Three](hackthebox/starting-point/three.md) (very easy)
   - Challenges
     - Hardware
       - [The Needle](hackthebox/challenges/the-needle.md) (very easy)
