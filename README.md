@@ -13,6 +13,7 @@
       - [Compressor](hackthebox/challenges/compressor.md) (very easy)
     - Web
       - [Letter Dispair](hackthebox/challenges/letter-dispair.md) (easy)
+      - [LoveTok](hackthebox/challenges/lovetok.md) (easy)
       - [Neonify](hackthebox/challenges/neonify.md) (easy)
       - [petpet rcbee](hackthebox/challenges/petpet-rcbee.md) (easy)
       - [Templated](hackthebox/challenges/templated.md) (easy)
