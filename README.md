@@ -12,6 +12,7 @@
     - Misc
       - [Compressor](hackthebox/challenges/compressor.md) (very easy)
     - Web
+      - [Diogenes' Rage](hackthebox/challenges/diogenes-rage.md) (easy)
       - [Letter Dispair](hackthebox/challenges/letter-dispair.md) (easy)
       - [LoveTok](hackthebox/challenges/lovetok.md) (easy)
       - [Neonify](hackthebox/challenges/neonify.md) (easy)
