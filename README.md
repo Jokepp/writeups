@@ -17,6 +17,7 @@
       - [LoveTok](hackthebox/challenges/lovetok.md) (easy)
       - [Neonify](hackthebox/challenges/neonify.md) (easy)
       - [petpet rcbee](hackthebox/challenges/petpet-rcbee.md) (easy)
+      - [Phonebook](hackthebox/challenges/phonebook.md) (easy)
       - [Templated](hackthebox/challenges/templated.md) (easy)
       - [Toxic](hackthebox/challenges/toxic.md) (easy)
       - [~~Userland City~~](hackthebox/challenges/userland-city.md) (medium)
