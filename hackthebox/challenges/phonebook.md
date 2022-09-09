@@ -50,7 +50,7 @@ After some testing however, this does not seem to help us so we look for a diffe
 
 Since at this point we are stuck, we do a web search for writeups of the challenge[^1][^2]. This leads us to a frustratingly easy solution for this first step: Just use "`*`" for both username and password. This leads us to the same search page we discovered earlier, but this time we are authenticated and we can use the search function.
 
-We are now able to search through the user database; however, this does not reveal any hints regarding the flag. Turning back to the writeups, we learn that the solution is to find the password of the user `Reese` through a bruteforce attack. This is made possible by the fact that we can use the wildcard character "`*`" for any part of the password. Therefore, we can guess one letter at a time. Flags at HTB have always the same pattern, so we try to login using "`HTB{*}`" as password, which is successful. Using the following _Python_ script, we can iterate through all possible passwords:
+We are now able to search through the user database; however, this does not reveal any hints regarding the flag. Turning back to the writeups, we learn that the solution is to find the password of the user `Reese` through a bruteforce attack. This is made possible by the fact that we can use the wildcard character "`*`" for any part of the password. Therefore, we can guess one letter at a time. Flags at HTB always have the same pattern, so we try to log in using "`HTB{*}`" as password, which is successful. Using the following _Python_ script, we can iterate through all possible passwords:
 
 ``` python
 import requests
