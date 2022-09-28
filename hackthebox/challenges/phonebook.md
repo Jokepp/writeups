@@ -9,7 +9,7 @@
    <tr><td><b> type       </b></td><td> challenge/__                                                 </td></tr>
    <tr><td><b> difficulty </b></td><td> easy                                                         </td></tr>
    <tr><td><b> startdate  </b></td><td> 2022-09-02                                                   </td></tr>
-   <tr><td><b> enddate    </b></td><td> __                                                   </td></tr>
+   <tr><td><b> enddate    </b></td><td> 2022-09-09                                                   </td></tr>
 </table>
 
 ## Description
