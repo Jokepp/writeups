@@ -23,9 +23,9 @@
 - Hack The Box
   - Challenges
     - Hardware
-      - [~~Debugging Interface~~](hackthebox/challenges/debugging-interface.md) (open)
+      - [~~Debugging Interface~~](hackthebox/challenges/debugging-interface.md) (2022-05-31)
     - Crypto
-      - [~~BabyEncryption~~](hackthebox/challenges/babyencryption.md) (open)
+      - [~~BabyEncryption~~](hackthebox/challenges/babyencryption.md) (2022-05-31)
     - Web
       - [~~Userland City~~](hackthebox/challenges/userland-city.md) (open)
       - [~~Debugger Unchained~~](hackthebox/challenges/debugger-unchained.md) (open)
