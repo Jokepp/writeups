@@ -26,6 +26,8 @@
       - [~~Debugging Interface~~](hackthebox/challenges/debugging-interface.md) (2022-05-31)
     - Crypto
       - [~~BabyEncryption~~](hackthebox/challenges/babyencryption.md) (2022-05-31)
+    - Pwn
+      - [~~Racecar~~](hackthebox/challenges/racecar.md) (open)
     - Web
       - [~~Userland City~~](hackthebox/challenges/userland-city.md) (open)
       - [~~Debugger Unchained~~](hackthebox/challenges/debugger-unchained.md) (open)
