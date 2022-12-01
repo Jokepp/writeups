@@ -18,6 +18,8 @@
 
 ## Solution
 
+Challenge solved, writeup tbd.
+
 <p align="center">
    <img src="includes/babyencryption-01.png" />
 </p>

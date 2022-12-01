@@ -18,7 +18,7 @@
 
 ## Solution
 
-[^1][^2][^3]
+Challenge solved, writeup tbd [^1][^2][^3]
 
 <p align="center">
    <img src="includes/debugging-interface-01.png" />
