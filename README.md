@@ -17,7 +17,6 @@
       - [LoveTok](hackthebox/challenges/lovetok.md) (2022-08-16)
       - [Diogenes' Rage](hackthebox/challenges/diogenes-rage.md) (2022-09-01)
       - [Phonebook](hackthebox/challenges/phonebook.md) (2022-09-09)
-      - [C.O.P.](hackthebox/challenges/cop.md) (2022-09-09)
 
 ## Unfinished Writeups
 
