@@ -77,7 +77,7 @@ def main():
       if testPassword(password + chars[char_index] + "*"):
          password += chars[char_index]
          char_index = 0
-         print("Scanning for password... Result so far:", password)
+         print("Scanning... ", password)
       else:
          char_index += 1
    
