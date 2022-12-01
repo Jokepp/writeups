@@ -36,7 +36,7 @@ When we login, the website sends a POST request to the `/login` endpoint. Since 
    <img src="includes/phonebook-03.png" />
 </p>
 
-This means that there is a _cross site scripting_ (_"XSS"_) vulnerability on this page. Since the payload is inserted intow the website using the `innerHTML` attribute, we cannot use a `<script>` tag. But we can use the following code to trigger the XSS without user interaction:
+This means that there is a _cross site scripting_ (_"XSS"_) vulnerability on this page. Since the payload is inserted into the website using the `innerHTML` attribute, we cannot use a `<script>` tag. But we can use the following code to trigger the XSS without user interaction:
 
 ``` html
 <img src="" onerror=alert(window.origin) />
