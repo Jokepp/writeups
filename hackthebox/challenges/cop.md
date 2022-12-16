@@ -24,7 +24,9 @@ We receive an IP and port to a server and a zip file containing the _Python Flas
    <img src="includes/cop-01.png" />
 </p>
 
-The page does not seem have any fields for user input and no cookies are used. The only place where any parameter can be manipulated is the endpoint for a product detail page, `/view/<product_id>`. When we inspect the files `routes.py`, `models.py`, and `database.py`, we see that the value of `<product_id>` is used for a _sqlite3_ database query without ever being sanitized! As a test, we try the payload `/view/3';--` and the system displays the page correctly:
+The page does not seem have any fields for user input and no cookies are used. The only place where any parameter can be manipulated is the endpoint for a product detail page, `/view/<product_id>`.
+
+When we inspect the files `routes.py`, `models.py`, and `database.py`, we see that the value of `<product_id>` is used for a _sqlite3_ database query without ever being sanitized! As a test, we try the payload `/view/3';--` and the system displays the page correctly:
 
 <p align="center">
    <img src="includes/cop-02.png" />
@@ -49,9 +51,11 @@ Only one query can be used at a time; query stacking is therefore not possible. 
 http://127.0.0.1:1337/view/1' AND FALSE UNION SELECT data FROM products WHERE id='3';--
 ```
 
-This works and displys the "Dill Pickle Jar" page instead of the "Pickle Shirt" page. Now we have to include a payload. Further analysis of the source code shows that the show's products are stored in the database as pickled objects. When they are retrieved for generating a web page, these pickled objects are unpickled without any security precautions. The unpickling happens using the custom template filter `pickle` defined in `app.py`.
+This works and displys the "Dill Pickle Jar" page instead of the "Pickle Shirt" page.
 
-A web search for _"flask pickle vulnerability"_ gives us a web page describing pickeling in Python and why it is vulnerable when improperly used and how to exploit it [^1]. A second page implements a quick way to generate a suitable payload [^2]. Using this tool, we generate a first test payload:
+Now we have to include a payload. Further analysis of the source code shows that the shop's products are stored in the database as pickled objects. When they are retrieved for generating a web page, these pickled objects are unpickled without any security precautions. The unpickling happens using the custom template filter `pickle` defined in `app.py`.
+
+A web search for _"flask pickle vulnerability"_ gives us a web page describing pickeling in Python and why it is vulnerable when improperly used and how to exploit it [^1]. A second page has the source code for a small tool for generating suitable payloads [^2]. Using this tool, we generate a first test payload:
 
 ``` bash
 > python3 exploit.py "uname -a"
@@ -93,7 +97,9 @@ This resulted in a working reverse shell:
 
 However, when trying to replicate this solution on the real system, we soon realize that this solution does not work. Apparently, it is not possible to access external IP addresses from a Docker container.
 
-This setback leads to the realization that a reverse shell had been overkill. Since we can already execute arbitrary shell commands at the target machine, we can just copy the flag to a location where we can access it on the web site. We create a new payload:
+This setback leads to the realization that a reverse shell had been overkill. Since we can already execute arbitrary shell commands at the target machine, we can just copy the flag to a location where we can access it on the web site.
+
+We create a new payload:
 
 ``` bash
 > python3 exploit.py "cp /app/flag.txt /app/application/static/flag.txt"
