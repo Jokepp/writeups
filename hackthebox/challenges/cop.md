@@ -5,7 +5,7 @@
 <table>
    <tr><td><b> site       </b></td><td> Hack the Box                                           </td></tr>
    <tr><td><b> url        </b></td><td> https://app.hackthebox.com/challenges/cop              </td></tr>
-   <tr><td><b> discussion </b></td><td> https://forum.hackthebox.com/t/official-c-o-p-discussion </td></tr>
+   <tr><td><b> discussion </b></td><td> https://forum.hackthebox.com/t/official-c-o-p-discussion/264615 </td></tr>
    <tr><td><b> type       </b></td><td> challenge/web                                          </td></tr>
    <tr><td><b> difficulty </b></td><td> easy                                                   </td></tr>
    <tr><td><b> startdate  </b></td><td> 2022-09-28                                             </td></tr>
