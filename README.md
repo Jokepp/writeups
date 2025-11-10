@@ -32,3 +32,4 @@
     - Web
       - [~~Userland City~~](hackthebox/challenges/userland-city.md) (open)
       - [~~Debugger Unchained~~](hackthebox/challenges/debugger-unchained.md) (open)
+      - [~~Flag Command~~](hackthebox/challenges/flag-command.md) (2025-11-10)
